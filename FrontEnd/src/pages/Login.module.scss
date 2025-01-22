@@ -1,0 +1,8 @@
+.container{
+  height: calc(100vh - 64px - 67px); // header高度：64px footer高度：67px
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

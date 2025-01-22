@@ -1,0 +1,32 @@
+.canvas {
+  min-height: 100%;
+  background-color: #fff;
+  overflow: hidden; // 解决外边距塌陷
+
+  .component-wrapper {
+    margin: 12px;
+    border: 1px solid #fff;
+    padding: 12px;
+    border-radius: 3px;
+
+    // & 表示父选择器
+    &:hover {
+      border-color: #d9d9d9 ;
+    }
+  }
+
+  // 点击组件，选中组件后的样式
+  .selected {
+    border-color: #1890ff !important;
+  }
+
+  // 使用工具栏锁定选中的组件后的组件样式
+  .locked {
+    opacity: .5;
+    cursor: not-allowed;
+  }
+
+  .component {
+    pointer-events: none;   // 屏蔽鼠标行为 要单独放在一层，若和component-wrapper放在同一层将无法选中组件，也就没有意义
+  }
+}
